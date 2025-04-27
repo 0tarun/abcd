@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jira-style Sidebar</title>
+    <link rel="stylesheet" href="project_guide.css">
+   
+</head>
+
+<body>
+    <div>
+        <navbar class="navbar">
+            <ul class="nav-list">
+                <p class="logo">Task Manager</p>
+            </ul>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Product Guide</a></li>
+                <li><a href="/">About</a></li>
+            </ul>
+            <ul class="nav-list">
+                <button id="login-btn" onclick="location.href='login.html'">Login</button>
+            </ul>
+        </navbar>
+
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Guide</h2>
+                <ul>
+                    <li onclick="showContent('getting-started')">Getting Started</li>
+                    <li onclick="showContent('projects')">Projects</li>
+                    <li onclick="showContent('boards')">Boards</li>
+                    <li onclick="showContent('issues')">Work Items/Issues</li>
+                    <li onclick="showContent('workflow')">Workflows</li>
+                    <li onclick="showContent('integration')">Integrations</li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <div id="getting-started" class="content-box active">
+                    <h1>Getting Started</h1>
+                    <p>This is the getting started guide for your project. Learn how to set up and manage your workflow.
+                    </p>
+                </div>
+                <div id="projects" class="content-box">
+                    <h1>Projects</h1>
+                    <p>Details about managing and organizing your projects.</p>
+                </div>
+                <div id="boards" class="content-box">
+                    <h1>Boards</h1>
+                    <p>Use boards to visualize tasks and workflows.</p>
+                </div>
+                <div id="issues" class="content-box">
+                    <h1>Work Items / Issues</h1>
+                    <p>Track tasks, bugs, and improvements with issues.</p>
+                </div>
+                <div id="workflow" class="content-box">
+                    <h1>Workflows</h1>
+                    <p>Customize and automate workflows for efficient tracking.</p>
+                </div>
+                <div id="integration" class="content-box">
+                    <h1>Integrations</h1>
+                    <p>Connect your project with third-party services.</p>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function showContent(id) {
+                const contentBoxes = document.querySelectorAll('.content-box');
+                contentBoxes.forEach(box => box.classList.remove('active'));
+                document.getElementById(id).classList.add('active');
+            }
+        </script>
+
+        <div class="footer">
+            <div class="footer1">
+                <p style="font-family: cursive; font-size: 60px; color: white; margin-left: 50px;">Task Manager</p>
+                <p style="font-family: cursive; color: white; margin-left: 50px;">Pani is a project management and issue
+                    tracking website that helps teams plan, track, and manage work. Limited is a leading home service
+                    company in Bangladesh which is working for democratizing digital lifestyle across the country.</p>
+            </div>
+            <div class="footer2">
+                <p style="position: relative; top: 180px;"><a href="/">Home</a></p>
+                <p style="position: relative; top: 180px;"><a href="/">Product Guide</a></p>
+                <p style="position: relative; top: 180px;"><a href="/">About</a></p>
+            </div>
+            <div class="footer3">
+                <p>House #08, Road #10, Stadium Road,</p>
+                <p>Mirpur, Dhaka, Bangladesh</p>
+                <p>+88 01328911249</p>
+                <p>task_manager1@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
